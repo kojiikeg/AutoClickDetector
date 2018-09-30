@@ -17,9 +17,6 @@ public class CheckClickIntervalThread extends Thread {
 		this.target = target;
 		this.allowNanoMillis = allowNanoMillis;
 		this.timeList = timeList;
-		
-		//ThreadStart
-		this.start();
 	}
 
 	@Override
