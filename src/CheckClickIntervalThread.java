@@ -2,6 +2,12 @@ import java.util.List;
 
 import org.bukkit.entity.Player;
 
+/**
+ * クリック間隔からマクロチェックするクラス
+ * 設定によってはサーバーに影響が出そうなのでThreadで処理
+ * @author makura
+ *
+ */
 public class CheckClickIntervalThread extends Thread {
 	private Player target;
 	private List<Long> timeList;
@@ -11,6 +17,9 @@ public class CheckClickIntervalThread extends Thread {
 		this.target = target;
 		this.allowNanoMillis = allowNanoMillis;
 		this.timeList = timeList;
+		
+		//ThreadStart
+		this.start();
 	}
 
 	@Override

@@ -36,6 +36,7 @@ public class EventListener implements Listener {
 		Player player = event.getPlayer();
 		Action type = event.getAction();
 
+		//とりあえず空中クリック時のみ検知
 		if (type == Action.LEFT_CLICK_AIR) {
 			List<Long> timeList;
 			long time = System.nanoTime();
